@@ -57,9 +57,6 @@ Analyze retail sales data to identify:
 - Regression analysis on Sales over Time
 - Interpreted R-squared and p-values for trend significance
 
- 📊 Sample Visuals
-
-< Add images from `/screenshots/` here using GitHub markdown or links >
 
  ✅ Outcome & Insights
 
