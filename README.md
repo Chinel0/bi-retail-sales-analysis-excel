@@ -22,7 +22,6 @@ A European multi-city retail chain asked us to:
 | `city_names`         | 18  | City    | `city_id`, `city_name`, `country` | Dimension |
 
 Data were delivered as six CSVs, imported into the Excel workbook `BI_Capstone_Project_ML.xlsx`.  
-All relationships are **star-schema ready**—ideal for a Checkmk “Business Intelligence” view when the data source is promoted to a monitored service.
 
 ---
 
@@ -98,7 +97,7 @@ We translated key findings into visual insights using Excel charts:
 | **📉 Bar Chart – Top 5 Stores** | Highlights the highest-revenue stores across the retail chain.<br><br>![Bar Chart](https://github.com/Chinel0/bi-retail-sales-analysis-excel/blob/5f04b5a72827e2db34eccf941435ff5a124c9ae7/excel2%20bar%20chart.png ) |
 | **📈 Line Chart – Sales Trends** | Displays revenue trends across different time periods.<br><br>![Line Chart](https://github.com/Chinel0/bi-retail-sales-analysis-excel/blob/5f04b5a72827e2db34eccf941435ff5a124c9ae7/excel2.2%20line%20chart.png   )
 | **📈 Scatter Plot – Stock vs Sales** | Visualizes correlation between inventory levels and actual sales.<br><br>![Scatter Plot](https://github.com/Chinel0/bi-retail-sales-analysis-excel/blob/5f04b5a72827e2db34eccf941435ff5a124c9ae7/excel4%20Scatter%20Plots.png) |
-| **🌞 Sunburst Chart – City > Store > Product** | Illustrates hierarchical sales structure, useful for drilling into performance across levels.<br><br>![Sunburst] |
+| **🌞 Sunburst Chart – City > Store > Product** | Illustrates hierarchical sales structure, useful for drilling into performance across levels.<br><br>![Sunburst](https://github.com/Chinel0/bi-retail-sales-analysis-excel/blob/74fdbc01d04a86857a93a035ec0e9707b242dc6c/excel3%20%20Sunburst%20Chart.png) |
 
 > ✨ _These visuals made it easy to spot trends and communicate findings to stakeholders._
 
