@@ -95,9 +95,10 @@ We translated key findings into visual insights using Excel charts:
 
 | Visualization | Description |
 |---------------|-------------|
-| **📉 Bar Chart – Top 5 Stores** | Highlights the highest-revenue stores across the retail chain.<br><br>![Top Stores](excel2 bar chart.png) |
-| **📈 Scatter Plot – Stock vs Sales** | Visualizes correlation between inventory levels and actual sales.<br><br>![Scatter Plot](excel3 scatterplot.png) |
-| **🌞 Sunburst Chart – City > Store > Product** | Illustrates hierarchical sales structure, useful for drilling into performance across levels.<br><br>![Sunburst](excel4/sunburst.png) |
+| **📉 Bar Chart – Top 5 Stores** | Highlights the highest-revenue stores across the retail chain.<br><br>![Bar Chart](screenshots/excel2%20bar%20chart.png) |
+| **📈 Line Chart – Sales Trends** | Displays revenue trends across different time periods.<br><br>![Line Chart](screenshots/excel2.2%20line%20chart.png)
+| **📈 Scatter Plot – Stock vs Sales** | Visualizes correlation between inventory levels and actual sales.<br><br>![Scatter Plot](screenshots/excel4%20Scatter%20Plots.png) |
+| **🌞 Sunburst Chart – City > Store > Product** | Illustrates hierarchical sales structure, useful for drilling into performance across levels.<br><br>![Sunburst](screenshots/excel3%20Sunburst%20Chart.png) |
 
 > ✨ _These visuals made it easy to spot trends and communicate findings to stakeholders._
 
