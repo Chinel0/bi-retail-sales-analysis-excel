@@ -135,8 +135,6 @@ Helsinki recorded the highest sales revenue among all cities, accounting for 14.
 1. **Inventory Right-Sizing** – Liquidate the € 2.4 M slow-moving stock; reinvest 40 % into the top-10 SKUs to capture unmet demand (model predicts +4 % GMV).  
 2. **Expand Tier-1 Playbook** – Replicate Helsinki/London promo calendar in Stockholm & Dublin (projected +€ 1.2 M quarterly revenue).  
 3. **SKU Rationalization** – Retire bottom-30 % products (by GMV) to reduce catalog complexity, free shelf space, and cut supply-chain overhead.  
-4. **BI Integration with Checkmk** – Publish sales & stock KPIs via Checkmk’s Livestatus API; enable real-time alerts when stock-out risk > 90 % or promo lift < 10 %.  
-5. **Continuous Monitoring** – Automate Excel → CSV Export → Checkmk ingestion nightly; schedule weekly anomaly detection to catch future outliers early.
 
 ---
 
