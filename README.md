@@ -9,9 +9,6 @@ A European multi-city retail chain asked us to:
 2. **Quantify stock-vs-sales efficiency** ( over- / under-stock ) to reduce working-capital locks.  
 3. **Surface seasonality & promotion effects** to refine marketing spend.
 
-**Why it matters at Checkmk**  
-Checkmk delivers unified monitoring. Retail groups using Checkmk want dashboards that combine *operational* KPIs (device health, network uptime) **and** *commercial* KPIs (sales, revenue, margin). Clean, well-modeled data is the prerequisite for wiring those metrics into Checkmk’s data-source plug-ins and custom BI tiles.
-
 ---
 
 ## 2️⃣  Data Structure Overview
@@ -30,6 +27,9 @@ All relationships are **star-schema ready**—ideal for a Checkmk “Business In
 ---
 
 ## 3️⃣  Executive Summary (One-slide KPI Story)
+This project presents a retail sales performance analysis for a regional chain, leveraging Excel’s capabilities for data cleaning, integration, and analysis. By consolidating datasets such as sales transactions, product hierarchies, and store-city mappings, we developed insights that support strategic decisions around inventory, marketing, and regional expansion.
+
+After preparing and cleaning six raw datasets, we analyzed sales trends across multiple business dimensions: store, city, and product. The following key performance metrics summarize the top findings:
 | Metric (FY-2023) | Result | Business Impact |
 |------------------|--------|-----------------|
 | **Revenue**      | **€ 64.8 M** | Baseline |
@@ -38,6 +38,68 @@ All relationships are **star-schema ready**—ideal for a Checkmk “Business In
 | **Stock-to-Sales Correlation** | **r = 0.71** | Significant overstock risk on slow movers |
 | **Seasonal Lift** | +22 % revenue in Q4 vs Q1 | Confirms marketing budget shift to November promos |
 | **Predicted Q1-2024 Revenue** | **€ 18.1 M** (+6 % YoY) | Forecast under current pricing & inventory plan |
+
+---
+
+🔧 Key Steps
+1. Data Cleaning & Preparation
+We began by importing and reviewing six raw datasets (sales.csv, product_hierarchy.csv, store_cities.csv, store_names.csv, city_names.csv, product_names.csv). To ensure high-quality analysis, we applied structured cleaning techniques:
+
+Removed duplicates to avoid inflated metrics and repeated transactions
+
+Standardized date and numeric formats for consistency across reports (e.g., applying European-style decimal/thousand separators)
+
+Cleaned text fields using TRIM() to eliminate irregular spacing
+
+Handled missing values by filtering and removing incomplete rows (as they represented a small portion of the data and could bias analysis)
+
+✨ This ensured that our base dataset was clean, consistent, and analytics-ready — a crucial step in any real-world BI workflow.
+
+---
+
+2. Data Integration & Transformation
+To enable multi-dimensional analysis, we merged the six datasets into a unified table that enriched the raw sales data with descriptive attributes like store names, product hierarchy, and city information.
+
+Used VLOOKUP and Power Query to join sales data with:
+
+Store metadata (e.g., city, name)
+
+Product categories and names
+
+City-level information for regional breakdowns
+
+Ensured referential integrity by verifying all foreign keys matched across files
+
+✨ This transformation enabled deeper insights by adding contextual layers to each transaction (e.g., "What products are selling in which city?").
+
+---
+
+3. Exploratory Data Analysis (EDA)
+Using Pivot Tables, we conducted structured analysis across several dimensions to uncover sales trends, top-performing segments, and outliers.
+
+Store Performance: Total and average sales, revenue, and stock by store
+
+City-Level Analysis: Identified which cities generated the most revenue
+
+Product Performance: Assessed top-selling products and average sales per item
+
+Stock vs. Sales Patterns: Compared inventory levels against sales to identify stock inefficiencies
+
+✨ This stage turned raw data into business insights, laying the foundation for recommendations like rebalancing inventory or adjusting regional marketing.
+
+---
+
+## 📊 Visualizations
+
+We translated key findings into visual insights using Excel charts:
+
+| Visualization | Description |
+|---------------|-------------|
+| **📉 Bar Chart – Top 5 Stores** | Highlights the highest-revenue stores across the retail chain.<br><br>![Top Stores](screenshots/top-stores.png) |
+| **📈 Scatter Plot – Stock vs Sales** | Visualizes correlation between inventory levels and actual sales.<br><br>![Scatter Plot](screenshots/scatterplot.png) |
+| **🌞 Sunburst Chart – City > Store > Product** | Illustrates hierarchical sales structure, useful for drilling into performance across levels.<br><br>![Sunburst](screenshots/sunburst.png) |
+
+> ✨ _These visuals made it easy to spot trends and communicate findings to stakeholders._
 
 ---
 
@@ -51,6 +113,16 @@ All relationships are **star-schema ready**—ideal for a Checkmk “Business In
 | 3 | **Stock inefficiency** | € 2.4 M capital tied in SKUs with < 0.5 sales / day | Scatter-plot vs stock shows strong positive slope (r = 0.71) —but 12 items break the pattern. |
 | 4 | **Promotion halo** | Promo periods drive +22 % unit lift, +5 pp margin dilution | Profit holds because of cross-sell; seasonality model based on 3-year history. |
 | 5 | **Store tiering** | Tier-1 stores (top quartile) average **€ 1.6 k€/m²** sales density vs tier-3 at **€ 0.8 k€/m²** | Supports re-allocation of inventory & staff hours. |
+
+#### 📊 Insight 2: Helsinki City Outperformed with €9.3 M in Sales
+
+Helsinki recorded the highest sales revenue among all cities, accounting for 14.4% of total sales. This spike was most pronounced in Q4, aligning with a localized winter marketing campaign (+17% YoY growth). 
+
+> **(STAR Mini-Reflection)**  
+> **S:** City-level performance was unclear across raw datasets.  
+> **T:** Determine which regions were outperforming and why.  
+> **A:** Merged store and city datasets, created pivot tables, and analyzed seasonal trends.  
+> **R:** Discovered Helsinki’s success and its link to campaign timing, which helped validate marketing ROI.
 
 *Excel artifacts*  
 - Pivot tables: revenue by store, city, product.  
@@ -66,12 +138,13 @@ All relationships are **star-schema ready**—ideal for a Checkmk “Business In
 4. **BI Integration with Checkmk** – Publish sales & stock KPIs via Checkmk’s Livestatus API; enable real-time alerts when stock-out risk > 90 % or promo lift < 10 %.  
 5. **Continuous Monitoring** – Automate Excel → CSV Export → Checkmk ingestion nightly; schedule weekly anomaly detection to catch future outliers early.
 
-
+---
 
  📸  Workbook & Evidence
 - `BI_Capstone_Project_ML.xlsx` — cleaned data, queries, pivot sheets.  
 - `screenshots/` — before/after cleaning, pivot views, visualizations.
 
+---
 
 🙋‍♀️ About Me
 
