@@ -95,10 +95,10 @@ We translated key findings into visual insights using Excel charts:
 
 | Visualization | Description |
 |---------------|-------------|
-| **📉 Bar Chart – Top 5 Stores** | Highlights the highest-revenue stores across the retail chain.<br><br>![Bar Chart](screenshots/excel2%20bar%20chart.png) |
-| **📈 Line Chart – Sales Trends** | Displays revenue trends across different time periods.<br><br>![Line Chart](screenshots/excel2.2%20line%20chart.png)
-| **📈 Scatter Plot – Stock vs Sales** | Visualizes correlation between inventory levels and actual sales.<br><br>![Scatter Plot](screenshots/excel4%20Scatter%20Plots.png) |
-| **🌞 Sunburst Chart – City > Store > Product** | Illustrates hierarchical sales structure, useful for drilling into performance across levels.<br><br>![Sunburst](screenshots/excel3%20Sunburst%20Chart.png) |
+| **📉 Bar Chart – Top 5 Stores** | Highlights the highest-revenue stores across the retail chain.<br><br>![Bar Chart](https://github.com/Chinel0/bi-retail-sales-analysis-excel/blob/5f04b5a72827e2db34eccf941435ff5a124c9ae7/excel2%20bar%20chart.png ) |
+| **📈 Line Chart – Sales Trends** | Displays revenue trends across different time periods.<br><br>![Line Chart](https://github.com/Chinel0/bi-retail-sales-analysis-excel/blob/5f04b5a72827e2db34eccf941435ff5a124c9ae7/excel2.2%20line%20chart.png   )
+| **📈 Scatter Plot – Stock vs Sales** | Visualizes correlation between inventory levels and actual sales.<br><br>![Scatter Plot](https://github.com/Chinel0/bi-retail-sales-analysis-excel/blob/5f04b5a72827e2db34eccf941435ff5a124c9ae7/excel4%20Scatter%20Plots.png) |
+| **🌞 Sunburst Chart – City > Store > Product** | Illustrates hierarchical sales structure, useful for drilling into performance across levels.<br><br>![Sunburst] |
 
 > ✨ _These visuals made it easy to spot trends and communicate findings to stakeholders._
 
